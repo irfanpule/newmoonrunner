@@ -32,7 +32,9 @@ import UIKit
 import CoreLocation
 import MapKit
 import AVFoundation
+import ActivityKit
 
+@available(iOS 16.1, *)
 class NewRunViewController: UIViewController {
   
   @IBOutlet weak var launchPromptStackView: UIStackView!
@@ -61,7 +63,7 @@ class NewRunViewController: UIViewController {
     }
     return try! AVAudioPlayer(data: successSound.data)
   }()
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     dataStackView.isHidden = true // required to work around behavior change in Xcode 9 beta 1
@@ -110,10 +112,19 @@ class NewRunViewController: UIViewController {
     upcomingBadge = Badge.next(for: 0)
     badgeImageView.image = UIImage(named: upcomingBadge.imageName)
     updateDisplay()
-    timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-      self.eachSecond()
+    
+    self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+        self.eachSecond()
     }
+    
     startLocationUpdates()
+    
+    // run live activity
+    do {
+        try LiveActivityManager.startActivity(distance: FormatDisplay.distance(distance), time: "0")
+    } catch {
+        print(error)
+    }
   }
   
   private func stopRun() {
@@ -125,12 +136,21 @@ class NewRunViewController: UIViewController {
     badgeStackView.isHidden = true
     
     locationManager.stopUpdatingLocation()
+    
+    // end live activity
+    if let activeActivity = Activity<RunningAttributes>.activities.first {
+        Task {
+            await LiveActivityManager.endActivity(activeActivity.id)
+        }
+    }
+    
   }
   
   func eachSecond() {
     seconds += 1
     checkNextBadge()
     updateDisplay()
+    print("proses eachSecond")
   }
   
   private func updateDisplay() {
@@ -147,12 +167,20 @@ class NewRunViewController: UIViewController {
     let distanceRemaining = upcomingBadge.distance - distance.value
     let formattedDistanceRemaining = FormatDisplay.distance(distanceRemaining)
     badgeInfoLabel.text = "\(formattedDistanceRemaining) until \(upcomingBadge.name)"
+    
+    // update display
+    if let activeActivity = Activity<RunningAttributes>.activities.first {
+        Task {
+            await LiveActivityManager.updateActivity(id:activeActivity.id, distance: formattedDistance, time: formattedTime)
+        }
+    }
   }
   
   private func startLocationUpdates() {
     locationManager.delegate = self
     locationManager.activityType = .fitness
     locationManager.distanceFilter = 10
+    locationManager.allowsBackgroundLocationUpdates = true
     locationManager.startUpdatingLocation()
   }
   
@@ -188,6 +216,7 @@ class NewRunViewController: UIViewController {
 
 // MARK: - Navigation
 
+@available(iOS 16.1, *)
 extension NewRunViewController: SegueHandlerType {
   enum SegueIdentifier: String {
     case details = "RunDetailsViewController"
@@ -204,6 +233,7 @@ extension NewRunViewController: SegueHandlerType {
 
 // MARK: - Location Manager Delegate
 
+@available(iOS 16.1, *)
 extension NewRunViewController: CLLocationManagerDelegate {
   
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -211,6 +241,7 @@ extension NewRunViewController: CLLocationManagerDelegate {
       let howRecent = newLocation.timestamp.timeIntervalSinceNow
       guard newLocation.horizontalAccuracy < 20 && abs(howRecent) < 10 else { continue }
       
+      print("proses mapnya")
       if let lastLocation = locationList.last {
         let delta = newLocation.distance(from: lastLocation)
         distance = distance + Measurement(value: delta, unit: UnitLength.meters)
@@ -227,6 +258,7 @@ extension NewRunViewController: CLLocationManagerDelegate {
 
 // MARK: - Map View Delegate
 
+@available(iOS 16.1, *)
 extension NewRunViewController: MKMapViewDelegate {
   func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
     guard let polyline = overlay as? MKPolyline else {

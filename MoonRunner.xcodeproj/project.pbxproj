@@ -28,7 +28,43 @@
 		18CF26ED1E80290C0097F88C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF26EC1E80290C0097F88C /* HomeViewController.swift */; };
 		18CF26EF1E80291E0097F88C /* NewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF26EE1E80291E0097F88C /* NewRunViewController.swift */; };
 		18CF26F11E80292C0097F88C /* RunDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF26F01E80292C0097F88C /* RunDetailsViewController.swift */; };
+		A91DB53D2A1534CC00C42A33 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91DB53C2A1534CC00C42A33 /* WidgetKit.framework */; };
+		A91DB53F2A1534CC00C42A33 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91DB53E2A1534CC00C42A33 /* SwiftUI.framework */; };
+		A91DB5422A1534CC00C42A33 /* runningActivityBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91DB5412A1534CC00C42A33 /* runningActivityBundle.swift */; };
+		A91DB5442A1534CC00C42A33 /* runningActivityLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91DB5432A1534CC00C42A33 /* runningActivityLiveActivity.swift */; };
+		A91DB5462A1534CC00C42A33 /* runningActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91DB5452A1534CC00C42A33 /* runningActivity.swift */; };
+		A91DB5492A1534CE00C42A33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91DB5482A1534CE00C42A33 /* Assets.xcassets */; };
+		A91DB54B2A1534CE00C42A33 /* runningActivity.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A91DB5472A1534CC00C42A33 /* runningActivity.intentdefinition */; };
+		A91DB54C2A1534CE00C42A33 /* runningActivity.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A91DB5472A1534CC00C42A33 /* runningActivity.intentdefinition */; };
+		A91DB54F2A1534CE00C42A33 /* runningActivityExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A91DB53A2A1534CC00C42A33 /* runningActivityExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A91DB5552A15378900C42A33 /* ActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91DB5542A15378900C42A33 /* ActivityAttributes.swift */; };
+		A91DB5572A153C1900C42A33 /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91DB5562A153C1900C42A33 /* LiveActivityManager.swift */; };
+		A91DB5592A15468800C42A33 /* ActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91DB5542A15378900C42A33 /* ActivityAttributes.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A91DB54D2A1534CE00C42A33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18888DB71E7F0FA80038A3AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A91DB5392A1534CC00C42A33;
+			remoteInfo = runningActivityExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A91DB5532A1534CE00C42A33 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A91DB54F2A1534CE00C42A33 /* runningActivityExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		180924811EF33DE2007CF38F /* MulticolorPolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticolorPolyline.swift; sourceTree = "<group>"; };
@@ -54,6 +90,17 @@
 		18CF26EC1E80290C0097F88C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		18CF26EE1E80291E0097F88C /* NewRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRunViewController.swift; sourceTree = "<group>"; };
 		18CF26F01E80292C0097F88C /* RunDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunDetailsViewController.swift; sourceTree = "<group>"; };
+		A91DB53A2A1534CC00C42A33 /* runningActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = runningActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A91DB53C2A1534CC00C42A33 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		A91DB53E2A1534CC00C42A33 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A91DB5412A1534CC00C42A33 /* runningActivityBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = runningActivityBundle.swift; sourceTree = "<group>"; };
+		A91DB5432A1534CC00C42A33 /* runningActivityLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = runningActivityLiveActivity.swift; sourceTree = "<group>"; };
+		A91DB5452A1534CC00C42A33 /* runningActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = runningActivity.swift; sourceTree = "<group>"; };
+		A91DB5472A1534CC00C42A33 /* runningActivity.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = runningActivity.intentdefinition; sourceTree = "<group>"; };
+		A91DB5482A1534CE00C42A33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A91DB54A2A1534CE00C42A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A91DB5542A15378900C42A33 /* ActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityAttributes.swift; sourceTree = "<group>"; };
+		A91DB5562A153C1900C42A33 /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +108,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A91DB5372A1534CC00C42A33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A91DB53F2A1534CC00C42A33 /* SwiftUI.framework in Frameworks */,
+				A91DB53D2A1534CC00C42A33 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				18888DC11E7F0FA80038A3AF /* MoonRunner */,
+				A91DB5402A1534CC00C42A33 /* runningActivity */,
+				A91DB53B2A1534CC00C42A33 /* Frameworks */,
 				18888DC01E7F0FA80038A3AF /* Products */,
 			);
 			indentWidth = 2;
@@ -92,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				18888DBF1E7F0FA80038A3AF /* MoonRunner.app */,
+				A91DB53A2A1534CC00C42A33 /* runningActivityExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +178,8 @@
 				187AF9A61EF2FC1200C2B8E7 /* FormatDisplay.swift */,
 				187AF9A81EF3170700C2B8E7 /* LocationManager.swift */,
 				180924811EF33DE2007CF38F /* MulticolorPolyline.swift */,
+				A91DB5542A15378900C42A33 /* ActivityAttributes.swift */,
+				A91DB5562A153C1900C42A33 /* LiveActivityManager.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -154,6 +215,28 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		A91DB53B2A1534CC00C42A33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A91DB53C2A1534CC00C42A33 /* WidgetKit.framework */,
+				A91DB53E2A1534CC00C42A33 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A91DB5402A1534CC00C42A33 /* runningActivity */ = {
+			isa = PBXGroup;
+			children = (
+				A91DB5412A1534CC00C42A33 /* runningActivityBundle.swift */,
+				A91DB5432A1534CC00C42A33 /* runningActivityLiveActivity.swift */,
+				A91DB5452A1534CC00C42A33 /* runningActivity.swift */,
+				A91DB5472A1534CC00C42A33 /* runningActivity.intentdefinition */,
+				A91DB5482A1534CE00C42A33 /* Assets.xcassets */,
+				A91DB54A2A1534CE00C42A33 /* Info.plist */,
+			);
+			path = runningActivity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,15 +247,34 @@
 				18888DBB1E7F0FA80038A3AF /* Sources */,
 				18888DBC1E7F0FA80038A3AF /* Frameworks */,
 				18888DBD1E7F0FA80038A3AF /* Resources */,
+				A91DB5532A1534CE00C42A33 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A91DB54E2A1534CE00C42A33 /* PBXTargetDependency */,
 			);
 			name = MoonRunner;
 			productName = MoonRunner;
 			productReference = 18888DBF1E7F0FA80038A3AF /* MoonRunner.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A91DB5392A1534CC00C42A33 /* runningActivityExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A91DB5502A1534CE00C42A33 /* Build configuration list for PBXNativeTarget "runningActivityExtension" */;
+			buildPhases = (
+				A91DB5362A1534CC00C42A33 /* Sources */,
+				A91DB5372A1534CC00C42A33 /* Frameworks */,
+				A91DB5382A1534CC00C42A33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = runningActivityExtension;
+			productName = runningActivityExtension;
+			productReference = A91DB53A2A1534CC00C42A33 /* runningActivityExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -180,7 +282,7 @@
 		18888DB71E7F0FA80038A3AF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Richard Critz";
 				TargetAttributes = {
@@ -195,14 +297,18 @@
 							};
 						};
 					};
+					A91DB5392A1534CC00C42A33 = {
+						CreatedOnToolsVersion = 14.3;
+						DevelopmentTeam = 3J6V3X728E;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 18888DBA1E7F0FA80038A3AF /* Build configuration list for PBXProject "MoonRunner" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -212,6 +318,7 @@
 			projectRoot = "";
 			targets = (
 				18888DBE1E7F0FA80038A3AF /* MoonRunner */,
+				A91DB5392A1534CC00C42A33 /* runningActivityExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -228,6 +335,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A91DB5382A1534CC00C42A33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A91DB5492A1534CE00C42A33 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -237,10 +352,13 @@
 			files = (
 				18CF26EF1E80291E0097F88C /* NewRunViewController.swift in Sources */,
 				180924851EF434F3007CF38F /* Badge.swift in Sources */,
+				A91DB5552A15378900C42A33 /* ActivityAttributes.swift in Sources */,
 				18888DD91E7F1D940038A3AF /* CoreDataStack.swift in Sources */,
 				187AF9A91EF3170700C2B8E7 /* LocationManager.swift in Sources */,
 				18888DCB1E7F0FA80038A3AF /* MoonRunner.xcdatamodeld in Sources */,
 				18CF26F11E80292C0097F88C /* RunDetailsViewController.swift in Sources */,
+				A91DB54C2A1534CE00C42A33 /* runningActivity.intentdefinition in Sources */,
+				A91DB5572A153C1900C42A33 /* LiveActivityManager.swift in Sources */,
 				1809248D1EF43E84007CF38F /* BadgeDetailsViewController.swift in Sources */,
 				180924821EF33DE2007CF38F /* MulticolorPolyline.swift in Sources */,
 				18888DC31E7F0FA80038A3AF /* AppDelegate.swift in Sources */,
@@ -255,7 +373,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A91DB5362A1534CC00C42A33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A91DB5462A1534CC00C42A33 /* runningActivity.swift in Sources */,
+				A91DB5422A1534CC00C42A33 /* runningActivityBundle.swift in Sources */,
+				A91DB5592A15468800C42A33 /* ActivityAttributes.swift in Sources */,
+				A91DB54B2A1534CE00C42A33 /* runningActivity.intentdefinition in Sources */,
+				A91DB5442A1534CC00C42A33 /* runningActivityLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A91DB54E2A1534CE00C42A33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A91DB5392A1534CC00C42A33 /* runningActivityExtension */;
+			targetProxy = A91DB54D2A1534CE00C42A33 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		18888DC61E7F0FA80038A3AF /* Main.storyboard */ = {
@@ -383,12 +521,13 @@
 		18888DD51E7F0FA80038A3AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3J6V3X728E;
 				INFOPLIST_FILE = MoonRunner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.buatin.ziro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.buatin.moonrunner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
@@ -398,15 +537,83 @@
 		18888DD61E7F0FA80038A3AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3J6V3X728E;
 				INFOPLIST_FILE = MoonRunner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.buatin.ziro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.buatin.moonrunner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		A91DB5512A1534CE00C42A33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3J6V3X728E;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = runningActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = runningActivity;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Richard Critz. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.buatin.moonrunner.runningActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A91DB5522A1534CE00C42A33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3J6V3X728E;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = runningActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = runningActivity;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Richard Critz. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.buatin.moonrunner.runningActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -427,6 +634,15 @@
 			buildConfigurations = (
 				18888DD51E7F0FA80038A3AF /* Debug */,
 				18888DD61E7F0FA80038A3AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A91DB5502A1534CE00C42A33 /* Build configuration list for PBXNativeTarget "runningActivityExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A91DB5512A1534CE00C42A33 /* Debug */,
+				A91DB5522A1534CE00C42A33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
